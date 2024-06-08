@@ -20,6 +20,36 @@ body {
   padding: 7px;
 }
 
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  gap: 20px;
+  background-color: #eee;
+}
+
+nav a {
+  display: inline-block;
+  min-width: 9rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  border: solid 1px rgb(22, 22, 22);
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: yellowgreen;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /* .resultParas{
     width:400px;
     height: 50px;
@@ -86,7 +116,7 @@ button {
   background-color: #474747;
   color: #fff;
   font-size: 25px;
-  overflow:visible;
+  overflow: visible;
 }
 
 h1 {
