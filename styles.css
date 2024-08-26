@@ -106,6 +106,8 @@ button {
 
 .guesses {
   background-color: #7a7a7a;
+  margin: 8px;
+  /* padding:12px; */
 }
 
 #wrapper {

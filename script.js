@@ -1,5 +1,5 @@
 // const random = Math.round(Math.random() * 100) + 1;
-let random = parseInt(Math.random() * 100 + 1);
+const random = parseInt(Math.random() * 100 + 1);
 // console.log(random);
 
 const submit = document.querySelector("#subt");
