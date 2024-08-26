@@ -1,6 +1,6 @@
 // const random = Math.round(Math.random() * 100) + 1;
-const random = parseInt(Math.random() * 100 + 1);
-// console.log(random);
+let random = parseInt(Math.random() * 100 + 1);
+console.log(random);
 
 const submit = document.querySelector("#subt");
 const userInput = document.querySelector("#guessField");
@@ -20,7 +20,7 @@ if (playGame) {
   submit.addEventListener("click", function (e) {
     e.preventDefault();
     const guess = parseInt(userInput.value);
-    console.log(guess);
+    // console.log(guess);
     validateGuess(guess);
   });
 }
@@ -33,10 +33,13 @@ function validateGuess(guess) {
     alert(`${guess} is not a number between 1 to 100`);
   } else {
     prevGuess.push(guess);
-    if (numGuess > 9) {
+    if (numGuess > 8 && random !== guess) {
       displayGuess(guess);
       displayMessage(`Game Over. Random Number was ${random}`);
       endGame();
+    } else if (numGuess > 8 && random === guess) {
+      displayGuess(guess);
+      checkGuess(guess);
     } else {
       displayGuess(guess);
       checkGuess(guess);
@@ -79,6 +82,8 @@ function newGame() {
     lastResult.innerHTML = `${10 - numGuess}`;
     userInput.removeAttribute("disabled");
     startOver.removeChild(p);
+
+    console.log(random);
 
     playGame = true;
   });
